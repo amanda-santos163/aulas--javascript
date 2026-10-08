@@ -9,10 +9,15 @@ const elementosFake = [
     { id: 8, tagName: 'SPAN', style: { color: 'yellow', display: 'inline' }, classList: ['highlight'] },
     { id: 9, tagName: 'LI', style: { color: 'black', display: 'list-item' }, classList: ['item-lista', 'pending'] },
     { id: 10, tagName: 'FOOTER', style: { color: 'white', display: 'flex' }, classList: ['footer-area'] }
-  ];
+];
 
-  for (const elemento of elementosFake) {
-    elemento.style.backgroundColor = '#FFFFFF'
+elementosFake.forEach(tag => {
 
-    console.log (elementosFake)
+for (identificacao in elementosFake){
+  if(elementosFake[identificacao].classList.includes('pending')){
+    elementosFake[identificacao].classList = 'done'
+    elementosFake[identificacao].style.color = 'green'
+    }
   }
+})
+    console.log(elementosFake)

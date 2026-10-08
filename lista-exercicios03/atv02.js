@@ -9,10 +9,19 @@ const elementosFake = [
     { id: 8, tagName: 'SPAN', style: { color: 'yellow', display: 'inline' }, classList: ['highlight'] },
     { id: 9, tagName: 'LI', style: { color: 'black', display: 'list-item' }, classList: ['item-lista', 'pending'] },
     { id: 10, tagName: 'FOOTER', style: { color: 'white', display: 'flex' }, classList: ['footer-area'] }
-  ];
+];
 
-  for (const elemento of elementosFake) {
-    elemento.style.backgroundColor = '#FFFFFF'
+  
+elementosFake.forEach((elemento) => {
 
-    console.log (elementosFake)
+  for (let propriedade in elemento) {
+
+    if (elementosFake.id === true) {
+      elemento.id = elemento.id  ? `ID-0${elemento.id} `: `ID-${elemento.id}`;
+    }
+
   }
+
+});
+
+console.log(elementosFake)
